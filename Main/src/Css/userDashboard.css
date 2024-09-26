@@ -1,0 +1,34 @@
+.main-div {
+    display: flex;
+    background-color: #fff;
+    min-height: 63vh;
+    border-radius: 30px;
+  }
+  
+  .user-details {
+    background-color: #f0f0f0; 
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  .user-details p{
+    align-items: center;
+    justify-content: center;
+    margin: 50px 1%;
+    font-weight: bold;
+  }
+
+  .user-details button{
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .user-links {
+    margin: 4% 10%;
+    padding: 20px;
+  }
+
+  .arrow{
+    width: 40px;
+  }

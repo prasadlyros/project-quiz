@@ -1,0 +1,65 @@
+/* Form Container */
+.Ques-form {
+    margin-bottom: 20px; 
+    padding: 15px;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+}
+
+.Ques-form label {
+    display: block; 
+    margin-top: 10px; 
+    font-weight: bold; 
+}
+
+.question, .Option {
+    width: 90%; 
+    padding: 10px; 
+    margin-top: 5px;
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+}
+
+.Ques-submit {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; 
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.Ques-submit:disabled {
+    background-color: #007bff; 
+    opacity: 0.6; 
+    cursor: not-allowed; 
+}
+
+.Ques-submit:hover:not(:disabled) {
+    background-color: #0056b3; 
+}
+
+.back {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6c757d; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back:disabled {
+    background-color: #6c757d; 
+    opacity: 0.6; 
+    cursor: not-allowed; 
+}
+
+.back:hover:not(:disabled) {
+    background-color: #5a6268; 
+}

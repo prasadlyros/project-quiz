@@ -1,0 +1,63 @@
+.dropdown {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-text {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.update {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.update:hover{
+    background-color: #d2d3d4;
+}
+
+.submit-button:hover {
+    background-color: #0056b3; 
+}
+
+.CreateQuiz {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #458ac6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back:hover {
+    background-color: #5a6268;
+}

@@ -1,0 +1,84 @@
+{
+  "AdminDetails": [
+    {
+      "id": "6f8d",
+      "Username": "Prasad",
+      "Password": "prasad@123",
+      "Mail": "prasad@gmail.com"
+    },
+    {
+      "id": "f8fd",
+      "Username": "Harry",
+      "Password": "harry@123",
+      "Mail": "harry@gmail.com"
+    },
+    {
+      "id": "d02e",
+      "Username": "Ron",
+      "Password": "ron@123",
+      "Mail": "ron@gmail.com"
+    },
+    {
+      "id": "390a",
+      "Username": "Admin",
+      "Password": "admin@123",
+      "Mail": "admin@gmail.com"
+    },
+    {
+      "id": "6e95",
+      "Username": "Jessie",
+      "Password": "jessie@123",
+      "Mail": "jessie@gmail.com"
+    },
+    {
+      "id": "adc1",
+      "Username": "Draco",
+      "Password": "123",
+      "Mail": "draco@gmail.com"
+    }
+  ],
+  "UserDetails": [
+    {
+      "id": "8cfa",
+      "Username": "ravi",
+      "Password": "ravi@123",
+      "Mail": "ravi@gmail.com"
+    },
+    {
+      "id": "a510",
+      "Username": "lokesh",
+      "Password": "lokesh@123",
+      "Mail": "lokesh@gmail.com"
+    },
+    {
+      "id": "d37c",
+      "Username": "anil",
+      "Password": "anil@123",
+      "Mail": "anil@gmail.com"
+    },
+    {
+      "id": "41e0",
+      "Username": "varaprasad",
+      "Password": "vara@123",
+      "Mail": "prasad@gmail.com"
+    },
+    {
+      "id": "3edb",
+      "Username": "user",
+      "Password": "user@123",
+      "Mail": "user@gmail.com"
+    },
+    {
+      "id": "aa3f",
+      "Username": "Hari",
+      "Password": "hari@123",
+      "Mail": "hari@gmail.com"
+    },
+    {
+      "id": "4af9",
+      "Username": "Yoshi",
+      "Password": "yoshi@123",
+      "Mail": "yoshi@gmail.com"
+    }
+  ]
+}

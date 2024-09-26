@@ -1,0 +1,217 @@
+{
+  "react": [
+    {
+      "id": "bfd0",
+      "Question": "What is the correct command to create a new React Project?",
+      "Option1": "npm create-react-app myReactApp",
+      "Option2": "npx create-react-app myReactApp",
+      "Option3": "npx create-react-app",
+      "Option4": "npm create-react-app",
+      "Answer": "npm create-react-app myReactApp"
+    },
+    {
+      "id": "3f09",
+      "Question": "When setState()  is called inside render() method, which of the following events takes place?",
+      "Option1": "duplicate key error",
+      "Option2": "repetitive output happiness on the screen",
+      "Option3": "nothing happens",
+      "Option4": "stackoverflow error",
+      "Answer": "stackoverflow error"
+    },
+    {
+      "id": "c57a",
+      "Question": "The function which is called to render HTML to a web page in react?",
+      "Option1": "ReactDOM_render()",
+      "Option2": "render()",
+      "Option3": "render_DOM()",
+      "Option4": "DOM_HTML()",
+      "Answer": "render()"
+    },
+    {
+      "id": "ba42",
+      "Question": "Total ways of defining variables in ES6 is?",
+      "Option1": "1",
+      "Option2": "2",
+      "Option3": "3",
+      "Option4": "4",
+      "Answer": "3"
+    },
+    {
+      "id": "b32a",
+      "Question": "Using which of the following command can prevent default behavior at in react?",
+      "Option1": "preventDefault()",
+      "Option2": "avoidDefault()",
+      "Option3": "revokeDefault()",
+      "Option4": "none of the above",
+      "Answer": "preventDefault()"
+    },
+    {
+      "id": "5d84",
+      "Question": "What are arbitrary inputs of components in react also known as?",
+      "Option1": "Elements",
+      "Option2": "Props",
+      "Option3": "Keys",
+      "Option4": "Ref",
+      "Answer": "Props"
+    },
+    {
+      "id": "1481",
+      "Question": "What is ReactJS?",
+      "Option1": "Server-side framework",
+      "Option2": "user interface framework",
+      "Option3": "both ",
+      "Option4": "none of the above",
+      "Answer": "user interface framework"
+    },
+    {
+      "id": "01b9",
+      "Question": "Which of the following are two ways to handle data in react?",
+      "Option1": "services and components",
+      "Option2": "state and props",
+      "Option3": "state and services",
+      "Option4": "state and component",
+      "Answer": "state and props"
+    },
+    {
+      "id": "2658",
+      "Question": "Which of the following function is used to change the state of react component?",
+      "Option1": "this.setState()",
+      "Option2": "this.state()",
+      "Option3": "this.setChangeState()",
+      "Option4": "None of the above",
+      "Answer": "this.setState()"
+    },
+    {
+      "id": "a0c6",
+      "Question": "Choose the component which should be overridden to stop the component from updating?",
+      "Option1": "componentDidUpdate",
+      "Option2": "componentDidMount",
+      "Option3": "willComponentUpdate",
+      "Option4": "shouldComponentUpdate",
+      "Answer": "shouldComponentUpdate"
+    }
+  ],
+  "css": [
+    {
+      "id": "db31",
+      "Question": "What does CSS stand for?",
+      "Option1": "Colorful Style Sheets",
+      "Option2": "Cascading Style Sheets",
+      "Option3": "Computer Style Sheets",
+      "Option4": "Creative Style Sheets",
+      "Answer": "Cascading Style Sheets"
+    },
+    {
+      "id": "93eb",
+      "Question": "How can we change the background color of an element?",
+      "Option1": "background-color",
+      "Option2": "color",
+      "Option3": "Both A and B",
+      "Option4": "None of the above",
+      "Answer": "background-color"
+    },
+    {
+      "id": "508e",
+      "Question": "In how many ways can CSS be written in?",
+      "Option1": "1",
+      "Option2": "2",
+      "Option3": "3",
+      "Option4": "4",
+      "Answer": "3"
+    },
+    {
+      "id": "b863",
+      "Question": "How can we select an element with a specific Class in CSS?",
+      "Option1": "#",
+      "Option2": ".",
+      "Option3": ">",
+      "Option4": "None of the above",
+      "Answer": "."
+    },
+    {
+      "id": "8622",
+      "Question": "Which HTML tag is used to declare internal CSS?",
+      "Option1": "<style>",
+      "Option2": "<link>",
+      "Option3": "<script>",
+      "Option4": "None of the above",
+      "Answer": "<style>"
+    }
+  ],
+  "java script": [
+    {
+      "id": "5d84",
+      "Question": "What are arbitrary inputs of components in react also known as?",
+      "Option1": "Elements",
+      "Option2": "Props",
+      "Option3": "Keys",
+      "Option4": "Ref",
+      "Answer": "Props"
+    },
+    {
+      "id": "1481",
+      "Question": "What is ReactJS?",
+      "Option1": "Server-side framework",
+      "Option2": "user interface framework",
+      "Option3": "both ",
+      "Option4": "none of the above",
+      "Answer": "user interface framework"
+    },
+    {
+      "id": "01b9",
+      "Question": "Which of the following are two ways to handle data in react?",
+      "Option1": "services and components",
+      "Option2": "state and props",
+      "Option3": "state and services",
+      "Option4": "state and component",
+      "Answer": "state and props"
+    }
+  ],
+  "html": [
+    {
+      "id": "bfd0",
+      "Question": "What is the correct command to create a new React Project?",
+      "Option1": "npm create-react-app myReactApp",
+      "Option2": "npx create-react-app myReactApp",
+      "Option3": "npx create-react-app",
+      "Option4": "npm create-react-app",
+      "Answer": "npm create-react-app myReactApp"
+    },
+    {
+      "id": "e29e",
+      "Question": "What is the full form of HTML?",
+      "Option1": "Hyperlinks and text markup",
+      "Option2": "Home tool Language",
+      "Option3": "Hyper Text markup language",
+      "Option4": "None of the above",
+      "Answer": "Hyper Text markup language"
+    },
+    {
+      "id": "4902",
+      "Question": "Which attribute is used to provide a unique name to an HTML element?",
+      "Option1": "class",
+      "Option2": "id",
+      "Option3": "type",
+      "Option4": "All of the above",
+      "Answer": "id"
+    },
+    {
+      "id": "5b94",
+      "Question": "Which HTML tag is called the root element of an HTML document?",
+      "Option1": "<body>",
+      "Option2": "<head>",
+      "Option3": "<html>",
+      "Option4": "<title>",
+      "Answer": "<html>"
+    },
+    {
+      "id": "ea56",
+      "Question": "Which of the following are examples of block-level elements in HTML?",
+      "Option1": "<div>",
+      "Option2": "<p>",
+      "Option3": "<h1>",
+      "Option4": "All of the above",
+      "Answer": "All of the above"
+    }
+  ]
+}
