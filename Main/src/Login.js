@@ -51,7 +51,8 @@
                     if(details){
                         setGlobalUser({
                             Username : uname,
-                            Email : details.Mail
+                            Email : details.Mail,
+                            Dropdown : value
                         })
                         navigate("/admin")
                     }
@@ -67,7 +68,8 @@
                     if(details){
                         setGlobalUser({
                             Username : uname,
-                            Email : details.Mail
+                            Email : details.Mail,
+                            Dropdown : value
                         })
                         navigate("/user")
                     }

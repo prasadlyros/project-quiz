@@ -19,6 +19,9 @@
     color: black;
     margin-bottom: 5px;
   }
+  #read-only{
+    cursor: not-allowed;
+  }
 
   .form-input {
     padding: 8px;

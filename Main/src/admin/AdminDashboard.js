@@ -18,6 +18,10 @@ function AdminDashboard(){
         navigate('/')
     }
 
+    const handleUpdate = () => {
+        navigate('/update')
+    }
+
     return(
         <>
             <div className = 'header'>
@@ -55,7 +59,7 @@ function AdminDashboard(){
                 <div className="admin-details">
                     <p >Username : {globalUser.Username}</p>
                     <p>Email : {globalUser.Email}</p>
-                    <button className="update">Update</button>
+                    <button className="update" onClick={() => handleUpdate()}>Update</button>
                 </div>
                 <div className="admin-links">
                     <h2><img src={hand} alt="arrow" className="arrow"></img><Link to='/Createaquiz'>Create a quiz</Link></h2>

@@ -53,6 +53,10 @@ const ViewResults = () => {
         }
     }
 
+    const handleUpdate = () => {
+        navigate('/update')
+    }
+
     return( 
         <>
             <div className = 'header'>
@@ -90,7 +94,7 @@ const ViewResults = () => {
                 <div className="admin-details">
                     <p >Username : {globalUser.Username}</p>
                     <p>Email : {globalUser.Email}</p>
-                    <button className="update">Update</button>
+                    <button className="update" onClick={() => handleUpdate()}>Update</button>
                 </div>
                 <table className="results-table">
                     <thead>

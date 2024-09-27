@@ -87,6 +87,10 @@ const HtmlQuiz = () =>{
         return results.slice(startIndex,endIndex)
     }
 
+    const handleUpdate = () => {
+        navigate('/update')
+    }
+
     return(
         <>
         <div className = 'header'>
@@ -124,7 +128,7 @@ const HtmlQuiz = () =>{
                 <div className="user-details">
                     <p >Username : {globalUser.Username}</p>
                     <p>Email : {globalUser.Email}</p>
-                    <button className="update">Update</button>
+                    <button className="update" onClick={() => handleUpdate()}>Update</button>
                 </div>
                 <div className="mcq">
                     {

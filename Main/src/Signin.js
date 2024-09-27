@@ -15,7 +15,7 @@ const Signin = () => {
     const [mail,setMail] = useState('')
     const [pwd,setPwd] = useState('')
     const [conPwd, setConPwd] = useState('')
-    const [err ,setErr] = useState('')
+    const [pwdErr, setPwdEr] = useState('')
     const [msgErr, setMsgErr] = useState('')
     const [mailErr, setMailErr] = useState('')
     const [value, setValue] = useState(false)
@@ -39,7 +39,7 @@ const Signin = () => {
         }
       };
 
-      const handleHome = () => {
+    const handleHome = () => {
         navigate('/')
     }
 
@@ -55,52 +55,58 @@ const Signin = () => {
     }
     
     const handleSubmit = (e) => {
-        if(dropdown === 'admin'){
-            if(name === ''){
-                setValue(true)
-                setMsgErr('Feild required')
+        if(pwd === conPwd){
+            if(dropdown === 'admin'){
+                if(name === ''){
+                    setValue(true)
+                    setMsgErr('Feild required')
+                }
+                else if (mail === ''){
+                    setValue(true)
+                    setMailErr("Feild required")
+                }
+                else{
+                    axios.post(`http://localhost:3002/AdminDetails`,{
+                        Username : name,
+                        Password : pwd,
+                        Mail : mail
+                    }).then((res) => console.log(res)).catch((err) => console.log(err));
+                    setGlobalUser({
+                        Username : name,
+                        Email : mail
+                    })
+                    navigate('/admin')
+                }
             }
-            else if (mail === ''){
-                setValue(true)
-                setMailErr("feild required")
+            else if (dropdown === 'user'){
+                if(name === ''){
+                    setValue(true)
+                    setMsgErr('Feild required')
+                }
+                else if (mail === ''){
+                    setValue(true)
+                    setMailErr("feild required")
+                }
+                else{
+                    axios.post(`http://localhost:3002/UserDetails`,{
+                        Username : name,
+                        Password : pwd,
+                        Mail : mail
+                    }).then((res) => console.log(res)).catch((err) => console.log(err));
+                    setGlobalUser({
+                        Username : name,
+                        Email : mail
+                    })
+                    navigate('/user')
+                }
             }
             else{
-                axios.post(`http://localhost:3002/AdminDetails`,{
-                    Username : name,
-                    Password : pwd,
-                    Mail : mail
-                }).then((res) => console.log(res)).catch((err) => console.log(err));
-                setGlobalUser({
-                    Username : name,
-                    Email : mail
-                })
-                navigate('/admin')
-            }
-        }
-        else if (dropdown === 'user'){
-            if(name === ''){
-                setValue(true)
-                setMsgErr('Feild required')
-            }
-            else if (mail === ''){
-                setValue(true)
-                setMailErr("feild required")
-            }
-            else{
-                axios.post(`http://localhost:3002/UserDetails`,{
-                    Username : name,
-                    Password : pwd,
-                    Mail : mail
-                }).then((res) => console.log(res)).catch((err) => console.log(err));
-                setGlobalUser({
-                    Username : name,
-                    Email : mail
-                })
-                navigate('/user')
+                alert('Please select Register Type')
             }
         }
         else{
-            alert('Please select Register Type')
+            setValue(true)
+            setPwdEr("Password is not matching")
         }
     }
 
@@ -156,7 +162,7 @@ const Signin = () => {
                 <input className='form-input' type="password" name="password" onChange={(e) => handleChange(e,'pwd')} placeholder="Please enter your password"/>
                 <label className='form-label'>Confirm Password:</label>
                 <input className='form-input' type="password" name="confirmPassword" onChange={(e) => handleChange(e,'conPwd')} placeholder="Re-enter your password"/>
-                <p className='form-error'>{err}</p>
+                {value ?<p className='form-error'>{pwdErr}</p> : ''}
                 <button type="button" className='form-button' onClick={(e) => handleSubmit(e)}>Register</button>
             </form>
         </>

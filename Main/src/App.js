@@ -12,12 +12,14 @@ import Context from "./Context/Context";
 import { useState } from "react";
 import Signin from "./Signin";
 import LandingPage from "./LandingPage";
+import Update from "./user/update";
 
 function App() { 
 
   const [globalUser, setGlobalUser] = useState({
     Username : '',
-    Email : ''
+    Email : '',
+    Dropdown : ''
   })
 
   return (
@@ -36,6 +38,7 @@ function App() {
                 <Route path="/htmlQuiz" element= {<HtmlQuiz></HtmlQuiz>}></Route>
                 <Route path="/CssQuiz" element={<CssQuiz></CssQuiz>}></Route>
                 <Route path="/jsQuiz" element={<JsQuiz></JsQuiz>}></Route>
+                <Route path="/update" element= {<Update></Update>}></Route>
             </Routes>
         </Context.Provider>
       </BrowserRouter>

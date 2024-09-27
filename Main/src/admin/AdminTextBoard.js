@@ -48,6 +48,14 @@ const AdminTextBoard = () => {
         }
     }
 
+    const handleUpdate = () => {
+        navigate('/update')
+    }
+
+    const handleCreateQuiz = () => {
+        setCreateQuiz(false)
+    }
+
     const handleques = (e) => {
         e.preventDefault()
         setPages(e.target.value)
@@ -89,7 +97,7 @@ const AdminTextBoard = () => {
                 <div className="admin-details">
                         <p >Username : {globalUser.Username}</p>
                         <p>Email : {globalUser.Email}</p>
-                        <button className="update">Update</button>
+                        <button className="update" onClick={() => handleUpdate()}>Update</button>
                 </div>
                 <div>
                     <select onChange={(e) => handledropdown(e)} className="dropdown">
@@ -101,9 +109,10 @@ const AdminTextBoard = () => {
                     </select>
                     How many Ques : <input type="text" onChange={(e) => handleques(e)} className="dropdown-text"></input>
                     <button type="submit" onClick={(e) => handlePage(e)} className="submit-button">Submit</button>
-                    { createQuiz && <CreateQuiz totalPages = {array} perPage = {1} dropDownValue = {dropDownValue}></CreateQuiz>} 
+                    { createQuiz && <CreateQuiz totalPages = {array} perPage = {1} dropDownValue = {dropDownValue} createQuizValue ={handleCreateQuiz}></CreateQuiz>} 
                 </div>
             </div>
+            {console.log(createQuiz)}
         </>
     )
 }

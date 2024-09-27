@@ -3,7 +3,7 @@
     import "../Css/createQuiz.css"
 
     const CreateQuiz = (props) => {
-        const {totalPages,perPage,dropDownValue} = props
+        const {totalPages,perPage,dropDownValue,createQuizValue} = props
         const totalPagesInNumber = totalPages.length
         const [currentPage, setCurrentPage] =useState(1)
         const [question, setQuestion] = useState('')
@@ -21,11 +21,12 @@
         }
         
         const handleNextPage = (e) => {
-            if (currentPage <= totalPagesInNumber) {
+            if (currentPage < totalPagesInNumber) {
             setCurrentPage(currentPage + 1)
             }
             else{
                 console.log('it is in else part')
+                createQuizValue()
             }
         }
 
@@ -61,51 +62,31 @@
         }
 
         const handleSubmitQues = (e) =>{
-            if(dropDownValue === 'React'){
-            axios.post('http://localhost:3001/react',{
+            const obj = {
                 Question : question,
                 Option1 : option1,
                 Option2 : option2,
                 Option3 : option3,
                 Option4 : option4,
                 Answer : answer
-            }).then((res) => console.log(res)).catch((err) => console.log(err))
+            }
+            if(dropDownValue === 'React'){
+            axios.post('http://localhost:3001/react',obj).then((res) => console.log(res)).catch((err) => console.log(err))
             resetFun()
             handleNextPage(e)
             }
             else if(dropDownValue === 'HTML'){
-                axios.post('http://localhost:3001/html',{
-                    Question : question,
-                    Option1 : option1,
-                    Option2 : option2,
-                    Option3 : option3,
-                    Option4 : option4,
-                    Answer : answer
-                }).then((res) => console.log(res)).catch((err) => console.log(err));
+                axios.post('http://localhost:3001/html',obj).then((res) => console.log(res)).catch((err) => console.log(err));
                 resetFun()
                 handleNextPage(e)
             }
             else if(dropDownValue === 'js'){
-                axios.post('http://localhost:3001/java script',{
-                    Question : question,
-                    Option1 : option1,
-                    Option2 : option2,
-                    Option3 : option3,
-                    Option4 : option4,
-                    Answer : answer
-                }).then((res) => console.log(res)).catch((err) => console.log(err));
+                axios.post('http://localhost:3001/java script',obj).then((res) => console.log(res)).catch((err) => console.log(err));
                 resetFun()
                 handleNextPage(e)
             }
             else{
-                axios.post('http://localhost:3001/css',{
-                    Question : question,
-                    Option1 : option1,
-                    Option2 : option2,
-                    Option3 : option3,
-                    Option4 : option4,
-                    Answer : answer
-                }).then((res) => console.log(res)).catch((err) => console.log(err));
+                axios.post('http://localhost:3001/css',obj).then((res) => console.log(res)).catch((err) => console.log(err));
                 resetFun()
                 handleNextPage(e)
             }
@@ -115,6 +96,8 @@
 
         return(
             <>
+            currentPage : {currentPage}
+            totalPages : {totalPagesInNumber}            
             {
                 paginatedData.map((item,index) => (
                     <form className="Ques-form">

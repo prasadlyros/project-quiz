@@ -19,6 +19,10 @@ function UserDashboard(){
         navigate('/')
     }
 
+    const handleUpdate = () => {
+        navigate('/update')
+    }
+
     return(
         <>
             <div className = 'header'>
@@ -56,7 +60,7 @@ function UserDashboard(){
                 <div className="user-details">
                     <p >Username : {globalUser.Username}</p>
                     <p>Email : {globalUser.Email}</p>
-                    <button className="update">Update</button>
+                    <button className="update" onClick={() => handleUpdate()}>Update</button>
                 </div>
                 <div className="user-links">
                     <h2><img src={hand} alt="arrow" className="arrow"></img><Link to='/reactQuiz'>React quiz</Link></h2>
