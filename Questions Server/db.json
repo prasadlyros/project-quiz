@@ -136,47 +136,65 @@
       "Option3": "<script>",
       "Option4": "None of the above",
       "Answer": "<style>"
+    },
+    {
+      "id": "f197",
+      "Question": "Which of the following are valid ways to represent a colour in CSS?",
+      "Option1": "A valid color name",
+      "Option2": "RGB values",
+      "Option3": "HEX values",
+      "Option4": "All of the above",
+      "Answer": "All of the above"
     }
   ],
   "java script": [
     {
-      "id": "5d84",
-      "Question": "What are arbitrary inputs of components in react also known as?",
-      "Option1": "Elements",
-      "Option2": "Props",
-      "Option3": "Keys",
-      "Option4": "Ref",
-      "Answer": "Props"
+      "id": "5b40",
+      "Question": "Inside which HTML element do we put the JavaScript?",
+      "Option1": "<script>",
+      "Option2": "<javaScript>",
+      "Option3": "<scripting>",
+      "Option4": "<js>",
+      "Answer": "<script>"
     },
     {
-      "id": "1481",
-      "Question": "What is ReactJS?",
-      "Option1": "Server-side framework",
-      "Option2": "user interface framework",
-      "Option3": "both ",
-      "Option4": "none of the above",
-      "Answer": "user interface framework"
+      "id": "bfbe",
+      "Question": "Where is the correct place to insert a JavaScript?",
+      "Option1": "The <body> section",
+      "Option2": "The <header> section",
+      "Option3": "Both",
+      "Option4": "None of the above",
+      "Answer": "Both"
     },
     {
-      "id": "01b9",
-      "Question": "Which of the following are two ways to handle data in react?",
-      "Option1": "services and components",
-      "Option2": "state and props",
-      "Option3": "state and services",
-      "Option4": "state and component",
-      "Answer": "state and props"
+      "id": "5df4",
+      "Question": "How do you write \"Hello World\" in an alert box?",
+      "Option1": "msg(\"Hello world\");",
+      "Option2": "alert(\"Hello world\");",
+      "Option3": "msgBox(\"Hello world\");",
+      "Option4": "alertBox(\"Hello world\");",
+      "Answer": "alert(\"Hello world\");"
+    },
+    {
+      "id": "736c",
+      "Question": "How do you call a function named \"myFunction\"?",
+      "Option1": "myFunction()",
+      "Option2": "call myFunction()",
+      "Option3": "call function myFunction()",
+      "Option4": "None of the above",
+      "Answer": "myFunction()"
+    },
+    {
+      "id": "e2e9",
+      "Question": "How to write an IF statement in JavaScript?",
+      "Option1": "if(i==5)",
+      "Option2": "if i==5 then",
+      "Option3": "if i==5",
+      "Option4": "if i=5 then",
+      "Answer": "if(i==5)"
     }
   ],
   "html": [
-    {
-      "id": "bfd0",
-      "Question": "What is the correct command to create a new React Project?",
-      "Option1": "npm create-react-app myReactApp",
-      "Option2": "npx create-react-app myReactApp",
-      "Option3": "npx create-react-app",
-      "Option4": "npm create-react-app",
-      "Answer": "npm create-react-app myReactApp"
-    },
     {
       "id": "e29e",
       "Question": "What is the full form of HTML?",
@@ -212,6 +230,24 @@
       "Option3": "<h1>",
       "Option4": "All of the above",
       "Answer": "All of the above"
+    },
+    {
+      "id": "4473",
+      "Question": "What is the correct syntax for referring to an external script called \"xxx.js\"?",
+      "Option1": "<script name = \"xxx.js\">",
+      "Option2": "<script href = \"xxx.js\">",
+      "Option3": "<script src = \"xxx.js\">",
+      "Option4": "<script value = \"xxx.js\">",
+      "Answer": "<script src = \"xxx.js\">"
+    },
+    {
+      "id": "d9bd",
+      "Question": "Which HTML element is used to define description data?",
+      "Option1": "<li>",
+      "Option2": "<ol>",
+      "Option3": "<dd>",
+      "Option4": "<dl>",
+      "Answer": "<dd>"
     }
   ]
 }
