@@ -7,6 +7,8 @@
     background-color: whitesmoke; 
     color: white;
     border-radius: 8px; 
+    font-family:Calibri;
+    font-size: large;
   }
   
   .form-header {
@@ -48,6 +50,8 @@
     padding: 10px;
     width: 100%;
     cursor: pointer;
+    font-family: calibri;
+    font-size: medium;
   }
   
   .form-button:hover {
@@ -60,8 +64,6 @@
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bolder;
   }
   
   .form-container p {

@@ -18,6 +18,7 @@
         const [value, setValue] =useState('')
         const {_,setGlobalUser} = useContext(Context)
         const [error, setError] = useState('')
+        const [errorValue,setErrorValue] = useState(false)
 
         const handleChange = (e,keyword) => {
             e.preventDefault()
@@ -57,6 +58,7 @@
                         navigate("/admin")
                     }
                     else{
+                        setErrorValue(true)
                         setError("credentials not matching")
                     }
                 }).catch((err) => console.log(err))
@@ -89,8 +91,8 @@
                         <img src = {logo} alt= "logo" className = 'logo'></img>
                     </div>
                     <div className ="search-container">
-                    <input  type = "text" placeholder = " please search here" className = "search"></input>
-                        <button className = "button" onClick={(e) => handleSignIn(e)}>Signin</button>
+                    <input  type = "text" placeholder = "please search here..." className = "search"></input>
+                        <button className = "button" onClick={(e) => handleSignIn(e)}>SignIn</button>
                     </div>
                 </div>
                 <hr></hr>
@@ -120,7 +122,7 @@
                     <h2 className='form-header'>Login Quiz.com</h2>
                     <label className="form-label">Login type :</label>
                     <select name="interference" className="select" onChange={(e) => handledropdown(e)}>
-                        <option selected>select type</option>
+                        <option selected>Select Type</option>
                         <option value="admin">Admin</option>
                         <option value="user">User</option>
                     </select>
@@ -128,7 +130,7 @@
                     <input className="form-input" type="text" name="username" placeholder="enter your name" onChange={(e) => handleChange(e,"uname")}></input>
                     <label className="form-label">Password</label>
                     <input className="form-input" type="password" name="password" placeholder="enter your password" onChange={(e) => handleChange(e,"pwd")}></input>
-                    <p>{error}</p>
+                    {errorValue ?<p>{error}</p> :''}
                     <button className="form-button" type="button" onClick={(e) => handleValidation(e)}>Login</button>
                 </form> 
             </>

@@ -13,6 +13,7 @@ import { useState } from "react";
 import Signin from "./Signin";
 import LandingPage from "./LandingPage";
 import Update from "./user/update";
+import './Css/Landing.css'
 
 function App() { 
 

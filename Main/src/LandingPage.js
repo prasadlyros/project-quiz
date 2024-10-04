@@ -35,9 +35,9 @@ function LandingPage(){
                     <img src = {logo} alt= "logo" className = 'logo'></img>
                 </div>
                 <div className ="search-container">
-                <input  type = "text" placeholder = " please search here" className = "search"></input>
+                <input  type = "text" placeholder = "please search here..." className = "search"></input>
                     <button className = "button" onClick={(e) => handleLogin(e)}>Login</button>
-                    <button className = "button" onClick={(e) => handleSignIn(e)}>Signin</button>
+                    <button className = "button" onClick={(e) => handleSignIn(e)}>SignIn</button>
                 </div>
             </div>
             <hr></hr>
@@ -66,14 +66,14 @@ function LandingPage(){
             <div className="container">
                 <div className="div1">
                     <img src={banner} className="image" alt = "banner"></img>
-                    <h1>Create a quiz</h1>
-                    <p className="p">Play for free with 300 participants</p>
+                    <h1>Create a Quiz</h1>
+                    <h2 className="p">Play for free with 300 Participants</h2>
                     <button className = 'container-button' onClick={() => handleButton()}>Create Quiz</button>
                 </div>
                 <div className="div2">
                     <img src={banner1} className="image" alt = "banner"></img>
                     <h1>A.I</h1>
-                    <p className="p">Generate quiz using Ai</p>
+                    <h2 className="p">Generate Quiz using A.I</h2>
                     <button className = 'container-button' onClick={() => handleButton()}>Play Quiz</button>
                 </div>
             </div>

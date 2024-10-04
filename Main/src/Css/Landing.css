@@ -1,6 +1,6 @@
 body{
-    background-image: linear-gradient(90deg, rgb(251, 233, 236),rgb(234, 230, 230));
-    font-family: Arial, sans-serif;
+    background-image: linear-gradient(90deg, #fff,rgb(234, 230, 230));
+    font-family:sans-serif;
 }
 
 .header {
@@ -14,7 +14,7 @@ body{
   }
   
   .logo {
-    width: 500px;
+    width: 400px;
     height: auto;
     cursor: pointer;
     margin-right: 20px;
@@ -44,6 +44,7 @@ body{
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(248, 37, 4, 0.2);
     transition: transform 0.3s ease;
+    font-family:sans-serif;
   }
 
   .button:hover{
@@ -109,6 +110,7 @@ body{
   
   .p {
     margin-bottom: 40px;
+    font-family:sans-serif;
   }
   
   .container-button {
@@ -119,7 +121,9 @@ body{
     padding: 20px ;
     border-radius: 30px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease;  
+    font-family: Calibri;
+    font-size: medium;
   }
 
   .container-button:hover{

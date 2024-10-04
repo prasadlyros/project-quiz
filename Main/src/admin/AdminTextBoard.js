@@ -60,6 +60,11 @@ const AdminTextBoard = () => {
         e.preventDefault()
         setPages(e.target.value)
     }
+
+    const handleLogout = () => {
+        navigate('/login')
+    }
+
     return(
         <>
             <div className = 'header'>
@@ -67,7 +72,8 @@ const AdminTextBoard = () => {
                     <img src = {logo} alt= "logo" className = 'logo'></img>
                 </div>
                 <div className ="search-container">
-                <input  type = "text" placeholder = " please search here" className = "search"></input>
+                <input  type = "text" placeholder = "please search here" className = "search"></input>
+                <button className = "button" onClick={() => handleLogout()}>Logout</button>
                 </div>
             </div>
             <hr></hr>
@@ -101,7 +107,7 @@ const AdminTextBoard = () => {
                 </div>
                 <div>
                     <select onChange={(e) => handledropdown(e)} className="dropdown">
-                        <option selected>select tech</option>
+                        <option selected>Select tech</option>
                         <option value="React">React</option>
                         <option value="HTML">HTML</option>
                         <option value='css'>CSS</option>

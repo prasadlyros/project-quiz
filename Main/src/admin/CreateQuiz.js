@@ -12,6 +12,8 @@
         const [option3, setOption3] = useState('')
         const [option4, setOption4] = useState('')
         const [answer, setAnswer] = useState('')
+        const [error,setError] = useState('')
+        const [value, setValue] = useState(false)
         const [updateValue, setUpdateValue] = useState(totalPagesInNumber + 1)
 
         const getPaginatedData = (currentPage) =>{
@@ -71,45 +73,77 @@
                 Answer : answer
             }
             if(dropDownValue === 'React'){
-            axios.post('http://localhost:3001/react',obj).then((res) => console.log(res)).catch((err) => console.log(err))
-            resetFun()
-            handleNextPage(e)
+                if(question === '' || option1 ==='' || option2 === '' || option3 === '' || option4 === '' || answer === ''){
+                    setValue(true)
+                    setError('Feild required')
+                }
+                else{
+                    axios.post('http://localhost:3001/react',obj).then((res) => console.log(res)).catch((err) => console.log(err))
+                    resetFun()
+                    handleNextPage(e)
+                    setValue(false)
+                }
             }
             else if(dropDownValue === 'HTML'){
-                axios.post('http://localhost:3001/html',obj).then((res) => console.log(res)).catch((err) => console.log(err));
-                resetFun()
-                handleNextPage(e)
+                if(question === '' || option1 ==='' || option2 === '' || option3 === '' || option4 === '' || answer === ''){
+                    setValue(true)
+                    setError('Feild required')
+                }
+                else{
+                    axios.post('http://localhost:3001/html',obj).then((res) => console.log(res)).catch((err) => console.log(err));
+                    resetFun()
+                    handleNextPage(e)
+                    setValue(false)
+                }
             }
             else if(dropDownValue === 'js'){
-                axios.post('http://localhost:3001/java script',obj).then((res) => console.log(res)).catch((err) => console.log(err));
-                resetFun()
-                handleNextPage(e)
+                if(question === '' || option1 ==='' || option2 === '' || option3 === '' || option4 === '' || answer === ''){
+                    setValue(true)
+                    setError('Feild required')
+                }
+                else{
+                    axios.post('http://localhost:3001/java script',obj).then((res) => console.log(res)).catch((err) => console.log(err));
+                    resetFun()
+                    handleNextPage(e)
+                    setValue(false)
+                }
             }
             else{
-                axios.post('http://localhost:3001/css',obj).then((res) => console.log(res)).catch((err) => console.log(err));
-                resetFun()
-                handleNextPage(e)
+                if(question === '' || option1 ==='' || option2 === '' || option3 === '' || option4 === '' || answer === ''){
+                    setValue(true)
+                    setError('Feild required')
+                }
+                else{
+                    axios.post('http://localhost:3001/css',obj).then((res) => console.log(res)).catch((err) => console.log(err));
+                    resetFun()
+                    handleNextPage(e)
+                    setValue(false)
+                }
             }
         }
 
         const paginatedData = getPaginatedData(currentPage)
 
         return(
-            <>
-            currentPage : {currentPage}
-            totalPages : {totalPagesInNumber}            
+            <>           
             {
                 paginatedData.map((item,index) => (
                     <form className="Ques-form">
                     <label>Question {currentPage}</label>
                     <input type="text" key={index} value={question} placeholder="Enter your question" onChange={(e) => handleTextValues(e,"question")} className="question"></input>
+                    {value ? <p className="error">{error}</p>:''}
                     <label>Create Options</label>
                     <input type="text" className="Option" value={option1} placeholder="create options" onChange={(e) => handleTextValues(e,"option1")}></input>
+                    {value ? <p className="error">{error}</p>:''}
                     <input type="text" className="Option" value={option2} placeholder="create options" onChange={(e) => handleTextValues(e,"option2")}></input>
+                    {value ? <p className="error">{error}</p>:''}
                     <input type="text" className="Option" value={option3} placeholder="create options" onChange={(e) => handleTextValues(e,"option3")}></input>
+                    {value ? <p className="error">{error}</p>:''}
                     <input type="text" className="Option" value={option4} placeholder="create options" onChange={(e) => handleTextValues(e,"option4")}></input>
+                    {value ? <p className="error">{error}</p>:''}
                     <label>Answer</label>
                     <input type="text" className="Option" value={answer} placeholder="enter your answer" onChange={(e) => handleTextValues(e,"Answer")}></input>
+                    {value ? <p className="error">{error}</p>:''}
                     </form>
                 ))
             }

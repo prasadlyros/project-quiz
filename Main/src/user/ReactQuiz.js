@@ -2,13 +2,8 @@ import { useState,useEffect, useContext } from "react"
 import axios from "axios"
 import Context from "../Context/Context"
 import { useNavigate } from "react-router-dom"
-import home from '../assests/Home.png'
-import logo from '../assests/logo.png'
-import about from '../assests/about.png'
-import contact from '../assests/contact.png'
-import entertainment from '../assests/star.png'
-import back from '../assests/back.png'
 import "../Css/quiz.css"
+import Main from "./MainPage"
 
 const ReactQuiz = () =>{
 
@@ -25,14 +20,6 @@ const ReactQuiz = () =>{
     useEffect(() => {
         axios.get('http://localhost:3001/react').then((res) => setResults(res.data)).catch((err) => console.log(err))
     },[])
-
-    const handleHome = () => {
-        navigate('/')
-    }
-
-    const handleBack = () => {
-        navigate('/user')
-    }
 
     const handleAnswer = (e) => {
         setAnswer(e.target.value)
@@ -93,37 +80,7 @@ const ReactQuiz = () =>{
 
     return(
         <>
-            <div className = 'header'>
-                <div className = "logo-container">
-                    <img src = {logo} alt= "logo" className = 'logo'></img>
-                </div>
-                <div className ="search-container">
-                <input  type = "text" placeholder = " please search here" className = "search"></input>
-                </div>
-            </div>
-            <hr></hr>
-            <div className="div">
-                <div className = "item">
-                    <img src={home} alt="Home" className="image-logo" onClick={() => handleHome()}></img>
-                    <p>Home</p>
-                </div>
-                <div className = 'item'>
-                    <img src={about} alt="about"  className="image-logo"></img>
-                    <p>About</p>
-                </div>
-                <div className = 'item'>
-                    <img src={contact} alt="contact"  className="image-logo"></img>
-                    <p>Contact</p>
-                </div>
-                <div className = 'item'>
-                    <img src={entertainment} alt="singin"  className="image-logo"></img>
-                    <p>Entertainment</p>
-                </div>
-                <div className = 'item'>
-                    <img src={back} alt="Home"  className="image-logo" onClick={() => handleBack()}></img>
-                    <p>Back</p>
-                </div>
-            </div>
+        <Main></Main>
             <div className="main-div">
                 <div className="user-details">
                     <p >Username : {globalUser.Username}</p>

@@ -5,6 +5,7 @@
 
 .ques {
     margin-bottom: 20px;
+    font-family:Calibri;
 }
 
 .options {
@@ -17,6 +18,8 @@
     flex: 1 0 45%; 
     margin: 10px 2.5%; 
     cursor: pointer;
+    font-family: calibri;
+    font-size: large;
 }
 
 input[type="radio"] {
@@ -37,6 +40,8 @@ input[type="radio"] {
     font-weight: bold;
     transition: background-color 0.3s ease;
     margin-right: 10px;
+    font-family: Calibri;
+    font-size: medium;
 }
 
 .submit:hover,.skip:hover{
@@ -52,13 +57,6 @@ input[type="radio"] {
     background-color: #c0c0c0;
     cursor: not-allowed;
 }
-
-/* .result {
-    font-size: 1.2em;
-    margin-top: 20px;
-    align-items: center;
-    justify-content: center;
-} */
 
 .result {
     width: 300px;

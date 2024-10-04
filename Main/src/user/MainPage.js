@@ -1,26 +1,20 @@
-import { useContext } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import Context from "../Context/Context"
 import home from '../assests/Home.png'
 import logo from '../assests/logo.png'
 import about from '../assests/about.png'
 import contact from '../assests/contact.png'
 import entertainment from '../assests/star.png'
 import back from '../assests/back.png'
-import hand from '../assests/handArrow.png'
-import "../Css/userDashboard.css"
+import { useNavigate } from 'react-router-dom'
 
-function UserDashboard(){
-
-    const {globalUser,_} = useContext(Context)
+const Main = () => {
     const navigate = useNavigate()
 
     const handleHome = () => {
         navigate('/')
     }
 
-    const handleUpdate = () => {
-        navigate('/update')
+    const handleBack = () => {
+        navigate('/user')
     }
 
     const handleLogout = () => {
@@ -34,7 +28,7 @@ function UserDashboard(){
                     <img src = {logo} alt= "logo" className = 'logo'></img>
                 </div>
                 <div className ="search-container">
-                    <input  type = "text" placeholder = "please search here" className = "search"></input>
+                    <input  type = "text" placeholder = " please search here" className = "search"></input>
                     <button className = "button" onClick={() => handleLogout()}>Logout</button>
                 </div>
             </div>
@@ -57,25 +51,12 @@ function UserDashboard(){
                     <p>Entertainment</p>
                 </div>
                 <div className = 'item'>
-                    <img src={back} alt="Home"  className="image-logo" onClick={() => handleHome()}></img>
+                    <img src={back} alt="Home"  className="image-logo" onClick={() => handleBack()}></img>
                     <p>Back</p>
-                </div>
-            </div>
-            <div className="main-div">
-                <div className="user-details">
-                    <p >Username : {globalUser.Username}</p>
-                    <p>Email : {globalUser.Email}</p>
-                    <button className="update" onClick={() => handleUpdate()}>Update</button>
-                </div>
-                <div className="user-links">
-                    <h2><img src={hand} alt="arrow" className="arrow"></img><Link to='/reactQuiz'>React quiz</Link></h2>
-                    <h2><img src={hand} alt="arrow" className="arrow"></img><Link to='/htmlQuiz'>Html quiz</Link></h2>
-                    <h2><img src={hand} alt="arrow" className="arrow"></img><Link to='/CssQuiz'>Css quiz</Link></h2>
-                    <h2><img src={hand} alt="arrow" className="arrow"></img><Link to='/jsQuiz'>Java Script quiz</Link></h2>
                 </div>
             </div>
         </>
     )
 }
 
-export default UserDashboard
+export default Main

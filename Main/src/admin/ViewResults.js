@@ -57,6 +57,10 @@ const ViewResults = () => {
         navigate('/update')
     }
 
+    const handleLogout = () => {
+        navigate('/login')
+    }
+
     return( 
         <>
             <div className = 'header'>
@@ -64,7 +68,8 @@ const ViewResults = () => {
                     <img src = {logo} alt= "logo" className = 'logo'></img>
                 </div>
                 <div className ="search-container">
-                <input  type = "text" placeholder = " please search here" className = "search"></input>
+                <input  type = "text" placeholder = "please search here" className = "search"></input>
+                <button className = "button" onClick={() => handleLogout()}>Logout</button>
                 </div>
             </div>
             <hr></hr>
