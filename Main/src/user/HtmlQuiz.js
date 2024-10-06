@@ -4,6 +4,7 @@ import Context from "../Context/Context"
 import { useNavigate } from "react-router-dom"
 import "../Css/quiz.css"
 import Main from "./MainPage"
+import confetti from "canvas-confetti"
 
 const HtmlQuiz = () =>{
 
@@ -50,6 +51,13 @@ const HtmlQuiz = () =>{
                 techno : "html"
             })  
             setText(false)
+            confetti({
+                particleCount: 300,
+                spread: 190,
+                startVelocity: 30,
+                origin: { x: 0.5,y: 0.5 },
+                colors : ['#FFD700','#800000','#FFFDD0','#F7E7CE']
+            });
         }
         if(answer){
         axios.get(`http://localhost:3001/html?Answer=${answer}`).then((res) => {
@@ -117,7 +125,12 @@ const HtmlQuiz = () =>{
                                     <button onClick={() => handleNext()} className="skip">Skip</button>                      
                                     </>
                                 ))
-                                :<p className="result">Total result : {count}</p>
+                                :<div className="result">
+                                    <p className="yay">YAY</p>
+                                    <p>Answered {count} of {noOfPages}</p>
+                                    <p>Total Score : {count}</p>
+                                    {console.log('it is hitting')}
+                                </div>
                             :<p>No questions available</p>
                     }
                 </div>
