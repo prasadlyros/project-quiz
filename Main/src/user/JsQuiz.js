@@ -129,7 +129,6 @@ const JsQuiz = () =>{
                                     <p className="yay">YAY</p>
                                     <p>Answered {count} of {noOfPages}</p>
                                     <p>Total Score : {count}</p>
-                                    {console.log('it is hitting')}
                                 </div>
                             :<p>No questions available</p>
                     }
